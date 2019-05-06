@@ -47,7 +47,9 @@ Insert INto Orders (CustomerID, ProductID) Values
 	((Select ID From Customers Where Firstname = 'Walter' and Lastname = 'Sobchak'),
 	(Select ID From Products Where Name = 'Gun')),
 	((Select ID From Customers Where Firstname = 'Tina' and Lastname = 'Smith'),
-	(Select ID From Products Where Name = 'A Human Soul'));
+	(Select ID From Products Where Name = 'A Human Soul')),
+	((Select ID From Customers Where Firstname = 'Rufio' and Lastname = 'Murfreesboro'),
+	(Select ID From Products Where Name = 'IPhone'));
 
 Select * From Orders Inner Join Customers on Orders.CustomerID = Customers.ID Where (Firstname = 'Tina' AND LastName = 'Smith');
 
